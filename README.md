@@ -21,7 +21,21 @@
 ![front3](.gitbook/assets/front3.PNG)
 
 ## Бэкенд проекта
+
 Запросы к БД для вывода информации выполнены с помощью Django ORM.
+
+## Переменные окружения
+
+Часть переменных в `settings.py` считывается из `.env` с помощью библиотеки `environs`
+
+* `DEBUG` - по умолчанию `False`. Отвечает за DEBUG режим. В `.env` нужно прописать `DEBUG=True` для активации.
+
+* `SECRET_KEY `- по умолчанию `secret_key`. В .env нужно прописать `SECRET_KEY=super_secret_key`
+
+* `ALLOWED_HOSTS` - по умолчанию `127.0.0.1`. Адреса, на которых может запускаться проект.
+В .env перечислять через запятую `ALLOWED_HOSTS=127.0.0.1, example.com`
+
+* `DB_URL` - путь к БД. Шаблоны URL в таблице вот [здесь](https://github.com/jacobian/dj-database-url#url-schema).
 
 ## Запуск
 
