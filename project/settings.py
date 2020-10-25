@@ -5,14 +5,7 @@ env = Env()
 env.read_env()
 
 DATABASES = {
-    'default': {
-        'ENGINE': os.getenv('ENGINE'),
-        'HOST': os.getenv('HOST'),
-        'PORT': os.getenv('PORT'),
-        'NAME': os.getenv('NAME'),
-        'USER': os.getenv('USER'),
-        'PASSWORD': os.getenv('PASSWORD'),
-    }
+    'default': env.dj_db_url('DB_URL', )
 }
 
 INSTALLED_APPS = ['datacenter']
